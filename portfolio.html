@@ -7,78 +7,54 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="portfolio.css">
 </head>
+
 <body>
-    <nav>
+
+<nav>
     <div class="nav-inner">
-         <a href="index.html">Accueil</a>
+        <a href="index.html">Accueil</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="a-propos.html">À propos</a>
         <a href="contact.html">Contact</a>
     </div>
 </nav>
 
-    <main class="portfolio-page">
-        <section class="portfolio-hero">
-            <div class="container narrow">
-                <p class="portfolio-kicker">Product Designer Indépendante</p>
-                <h1>Mes projets antérieurs</h1>
-                <p class="portfolio-intro">
-                    Une sélection de projets autour de la conception de produits et services 
-                    numériques, de la recherche utilisateur et de l’analyse de données.
-                </p>
-            </div>
-        </section>
+<main class="portfolio-page">
 
-        <section class="portfolio-projects">
-            <div class="container">
-                <div class="project-grid">
-                    <article class="project-card">
-                        <div class="project-image">
-                            <span>Project Preview</span>
-                            <!-- <img src="images/project1.jpg" alt="Dashboard analytique complexe"> -->
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">Data Analytics</span>
-                            <h3>Data-intensive Analytics Dashboard</h3>
-                            <p>
-                                Designed a comprehensive dashboard enabling non-technical users to explore complex datasets through intuitive visualizations and interactive controls.
-                            </p>
-                            <a href="projets/project-template.html">Voir l'étude de cas</a>
-                        </div>
-                    </article>
+    <section class="portfolio-hero">
+        <div class="container narrow">
 
-                    <article class="project-card">
-                        <div class="project-image">
-                            <span>Project Preview</span>
-                            <!-- <img src="images/project2.jpg" alt="Refonte fondée sur la recherche utilisateur"> -->
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">UX Research</span>
-                            <h3>Research-driven Product Redesign</h3>
-                            <p>
-                                Led a complete redesign of a legacy product based on extensive user research, improving satisfaction and task completion rates.
-                            </p>
-                            <a href="projets/project2.html">Voir l'étude de cas</a>
-                        </div>
-                    </article>
+            <p class="portfolio-kicker">
+                Product Designer Indépendante
+            </p>
 
-                    <article class="project-card">
-                        <div class="project-image">
-                            <span>Project Preview</span>
-                            <!-- <img src="images/project3.jpg" alt="Outil d'automatisation IA"> -->
-                        </div>
-                        <div class="project-content">
-                            <span class="project-category">AI & Automation</span>
-                            <h3>AI-powered Workflow Experience</h3>
-                            <p>
-                                Designed a product experience integrating automation and AI-assisted features to simplify complex user journeys and support decision-making.
-                            </p>
-                            <a href="projets/project3.html">Voir l'étude de cas</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
+            <h1>Mes projets antérieurs</h1>
+
+            <p class="portfolio-intro">
+                Une sélection de projets autour de la conception de produits et services 
+                numériques, de la recherche utilisateur et de l’analyse de données.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="portfolio-projects">
+        <div class="container">
+
+            <!-- CONTENEUR VIDE -->
+            <div class="project-grid" id="all-projects-grid"></div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Script projets -->
+<script src="projects.js"></script>
+
+<script>
+renderProjects("all-projects-grid");
+</script>
+
 </body>
 </html>

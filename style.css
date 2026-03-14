@@ -14,6 +14,15 @@ body {
     background-color: #fff;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
 /* =========================
    Global layout
 ========================= */
@@ -33,7 +42,9 @@ section {
     padding: 80px 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1.2;
 }
 
@@ -41,11 +52,18 @@ p {
     line-height: 1.7;
 }
 
+.subtitle {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
 /* =========================
    Navigation
 ========================= */
 nav {
     background-color: #f8f9fa;
+    border-bottom: 1px solid transparent;
 }
 
 .nav-inner {
@@ -68,41 +86,37 @@ nav a:hover {
 }
 
 /* =========================
-   Hero section
+   Generic hero section
+   (base only, can be overridden
+   in page-specific CSS)
 ========================= */
 #hero {
-    padding: 120px 0px 120px 0px;
+    padding: 120px 0;
     text-align: center;
     background-color: #f8f9fa;
 }
 
 #hero h1 {
-    font-size: 3rem;
     margin-bottom: 32px;
+    font-size: 3rem;
     font-weight: 300;
 }
 
 #hero h2 {
-    font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #666;
+    font-size: 1.5rem;
     font-weight: 400;
+    color: #666;
 }
 
 #hero p {
-    font-size: 1.2rem;
     max-width: 760px;
-    margin: 0 auto 0px auto;
-}
-
-.subtitle {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    text-align: center;
+    margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 /* =========================
-   Featured projects / Portfolio
+   Generic projects sections
 ========================= */
 .featured-projects,
 #portfolio-content {
@@ -112,23 +126,23 @@ nav a:hover {
 
 .featured-projects h2,
 #portfolio-content h2 {
-    font-size: 2.5rem;
-    text-align: center;
     margin-bottom: 50px;
+    font-size: 2.5rem;
     font-weight: 300;
+    text-align: center;
 }
 
 .view-all {
-    text-align: center;
     margin-top: 40px;
+    text-align: center;
 }
 
 .view-all a {
     display: inline-block;
     color: #007acc;
     text-decoration: none;
-    font-weight: 500;
     font-size: 1.1rem;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -138,87 +152,99 @@ nav a:hover {
 
 /* =========================
    Project preview cards
+   Shared base for home + portfolio
 ========================= */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
-    align-items: start;
+    align-items: stretch;
 }
 
 .project-card {
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #e8e8e8;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.08);
 }
 
 .project-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: linear-gradient(135deg, #f4f7fb 0%, #dfe7f2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
+    background: linear-gradient(135deg, #f4f7fb 0%, #dfe7f2 100%);
+    border-bottom: 1px solid #ececec;
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .project-image span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
     color: #667085;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
-    padding: 0 12px;
 }
 
 .project-content {
-    padding: 22px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
 }
 
 .project-category {
     display: inline-block;
+    align-self: flex-start;
+    padding: 6px 10px;
     background: #eef3f7;
-    color: #4a5560;
-    padding: 5px 10px;
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 600;
-    margin-bottom: 14px;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4a5560;
 }
 
 .project-content h3 {
+    margin: 0;
     font-size: 1.45rem;
-    margin-bottom: 12px;
     font-weight: 600;
+    line-height: 1.3;
     color: #222;
 }
 
 .project-content p {
-    margin-bottom: 18px;
-    color: #666;
+    margin: 0;
     line-height: 1.7;
+    color: #666;
 }
 
 .project-content a {
     display: inline-block;
+    margin-top: auto;
     color: #007acc;
     text-decoration: none;
     font-weight: 600;
@@ -237,24 +263,32 @@ nav a:hover {
 }
 
 .case-study h1 {
+    margin-bottom: 20px;
     font-size: 3rem;
     font-weight: 300;
-    margin-bottom: 20px;
 }
 
 .case-study h2 {
+    margin-bottom: 20px;
     font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 20px;
 }
 
 .case-study p {
-    margin-bottom: 18px;
     max-width: 900px;
+    margin-bottom: 18px;
 }
 
 .case-study section + section {
     margin-top: 56px;
+}
+
+/* =========================
+   Contact helpers
+========================= */
+.contact-info {
+    display: flex;
+    gap: 32px;
 }
 
 /* =========================
@@ -298,13 +332,22 @@ nav a:hover {
         font-size: 1rem;
     }
 
-    .featured-projects h2 {
+    .featured-projects h2,
+    #portfolio-content h2 {
         font-size: 2rem;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
     }
 
     .contact-info {
