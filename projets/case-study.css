@@ -391,10 +391,6 @@
 ========================= */
 
 @media (max-width: 900px) {
-  .case-meta {
-    grid-template-columns: 1fr;
-  }
-
   .case-grid-2 {
     grid-template-columns: 1fr;
   }
