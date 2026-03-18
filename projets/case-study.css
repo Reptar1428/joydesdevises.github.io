@@ -64,9 +64,6 @@
   font-size: 1rem;
 }
 
-
-
-
 /* =========================
    Meta
 ========================= */
@@ -184,14 +181,13 @@
 
 .case-intro-layout {
   display: grid;
-  grid-template-columns: minmax(0,1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 40px;
   align-items: start;
 }
 
 .case-intro-text {
   min-width: 0;
-  
 }
 
 .case-intro-image {
@@ -309,17 +305,6 @@
   color: #777;
 }
 
-/* Ajustement spécifique section recherche */
-#recherche .case-image {
-  margin: 0;
-}
-
-#recherche .case-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
 /* =========================
    Results
 ========================= */
@@ -352,17 +337,14 @@
   color: #666;
 }
 
-/* sécurité supplémentaire si une image suit les métriques */
-#resultats .case-image {
-  margin-top: 32px;
-}
-
 /* =========================
    Footer CTA
 ========================= */
 
 .case-footer {
   padding: 8px 0 0;
+  margin-top: 8px;
+  margin-bottom: 40px;
 }
 
 .case-footer-card {
@@ -426,8 +408,6 @@
   transform: translateY(-2px);
 }
 
-
-
 /* =========================
    Livrables
 ========================= */
@@ -449,7 +429,7 @@
 .case-deliverables img {
   width: 100%;
   border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .case-deliverables figcaption {
@@ -459,12 +439,38 @@
   line-height: 1.5;
 }
 
+/* =========================
+   Illustration finale
+========================= */
+
+.case-ending-illustration {
+  width: 100%;
+  padding: 0;
+}
+
+.case-image-end {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.case-image-end img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
 
 /* =========================
    Responsive
 ========================= */
 
 @media (max-width: 900px) {
+  .case-meta {
+    grid-template-columns: 1fr;
+  }
+
   .case-grid-2 {
     grid-template-columns: 1fr;
   }
@@ -475,20 +481,24 @@
 
   .case-intro-layout {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
     align-items: start;
-  }
-
-  .case-cover {
-    max-width: 100%;
   }
 
   .case-cover img {
     max-height: 420px;
   }
 
+  .case-intro-image {
+    justify-self: start;
+  }
+
   .case-intro-image img {
-    max-height: 320px;
+    max-width: 320px;
+  }
+
+  .case-ending-illustration {
+    padding-top: 56px;
   }
 }
 
@@ -509,10 +519,6 @@
   .case-section-card {
     padding: 28px 22px;
   }
-
-  .case-meta {
-  margin-bottom: 32px;
-}
 
   .case-section h2 {
     font-size: 1.6rem;
@@ -535,11 +541,20 @@
     min-height: 220px;
   }
 
-  .case-intro-image {
-    padding: 12px;
+  .case-intro-image img {
+    max-width: 260px;
   }
 
-  .case-intro-image img {
-    max-height: 260px;
+  .case-deliverables {
+    padding: 28px 22px;
+  }
+
+  .case-deliverables figcaption {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+
+  .case-ending-illustration {
+    padding-top: 48px;
   }
 }

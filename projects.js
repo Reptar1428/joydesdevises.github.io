@@ -1,60 +1,59 @@
 const projects = [
   {
-    id: 1,
+    id: 11,
     slug: "bobbee",
     category: "Audit | UX Research | Data IA",
-    title: "Audit UX-UI du SaaS Bobbee (Isagri)",
+    title: "Identifier les frictions et améliorer l’expérience d’un SaaS complexe (Bobbee - ISAGRI)",
     description:
-      "Analyse de l’expérience utilisateur et de l’ergonomie d’un outil comptable complexe afin d’identifier les frictions et structurer des pistes d’amélioration produit, dont l’intégration de fonctionnalités IA.",
-    image: "images/Bobbee_Illustration.jpg",
+      "Identifier les points de friction d’un logiciel métier de comptabilité et proposer des améliorations concrètes pour rendre le produit plus fluide, plus lisible et prêt à évoluer.",
+    image: "../images/BOBBEE/bobbee_carte.jpg",
     alt: "Illustration du projet Bobbee avec dashboard et analyse financière",
     url: "projets/bobbee.html"
   },
   {
-    id: 2,
+    id: 10,
     slug: "ademe",
-    category: "UX Research | Data | Pulic sector",
-    title: "Design de service pour l’ADEME (Fabrique de la donnée)",
+    category: "UX Research | Data | Public sector",
+    title: "Structurer et améliorer une offre de services data multi-acteurs (ADEME - Fabrique de la donnée)",
     description:
-      "Recherche utilisateurs et analyse de données pour comprendre les usages des services data publics et formuler des recommandations d’amélioration à partir de plus de 90 retours utilisateurs.",
-    image: "images/Ademe_Illustration.png",
+      "Comprendre les usages et les interactions entre acteurs pour clarifier une offre de services data publics et proposer des améliorations alignées avec les besoins terrain.",
+    image: "images/ADEME/Ademe_Illustration.png",
     alt: "Aperçu du projet pour l'ADEME",
     url: "projets/ademe.html"
   },
   {
-    id: 3,
+    id: 9,
     slug: "T-SRU",
     category: "UX-UI | DSFR | GovTech | Data Viz",
-    title: "UI Design de la plateforme Transparence SRU - logements sociaux (Ministère Écologie)",
+    title: "Concevoir une interface claire pour un outil métier public (SRU - Ministère Écologie)",
     description:
-      "Conception d’interfaces pour un outil métier destiné aux collectivités, visant à centraliser les données et simplifier le suivi des obligations de logements sociaux.",
-    image: "images/sru-proto.png",
+      "Transformer un outil complexe de suivi des logements sociaux en une interface plus lisible et exploitable pour les collectivités.",
+    image: "images/TSRU/sru-carte.png",
     alt: "Aperçu du projet T-SRU",
     url: "projets/T-SRU.html"
   },
-
   {
-    id: 4,
+    id: 8,
     slug: "TRM",
     category: "Strategie | UX-UI | Data | GovTech",
-    title: "Refonte du produit data Transport Routier de Marchandises (Ministère Écologie)",
-    description: "Cadrage produit, recherche utilisateurs et conception de nouveaux parcours pour améliorer la collecte et la fiabilité des données sur le transport routier de marchandises.",
-    image: "images/trm-research.png",
+    title: "Améliorer la collecte et la fiabilité de données métier (TRM - Ministère Écologie)",
+    description:
+      "Repenser les parcours et le produit pour faciliter la collecte de données sur le transport routier de marchandises et améliorer leur qualité.",
+    image: "images/TRM/trm-carte.png",
     alt: "Aperçu du projet TRM",
     url: "projets/trm.html"
   },
-
   {
-    id: 5,
+    id: 7,
     slug: "OHC",
     category: "Data analyses | Questionnaire | Automatisation",
-    title: "Transformer des données de bien-être en leviers d’action (OCTO Technology)",
-    description: "Passer de questionnaires peu exploitables à un outil fiable permettant de comprendre le bien-être des collaborateurs et d’orienter des décisions concrètes à l’échelle de l’entreprise.",
-    image: "images/ohc-illustration.png",
+    title: "Transformer des données de bien-être en décisions concrètes (OCTO Technology)",
+    description:
+      "Passer de questionnaires peu exploitables à un outil fiable permettant de comprendre le bien-être des collaborateurs et d’orienter des décisions à l’échelle de l’entreprise.",
+    image: "images/OHC/ohc-illustration.png",
     alt: "Aperçu du projet OHC",
     url: "projets/ohc.html"
-  },
-
+  }
 ];
 
 function createProjectCard(project) {
