@@ -73,6 +73,11 @@ a.cta-button:focus {
     transform: translateY(-2px);
 }
 
+.cta-contact {
+    display: flex;
+    gap: 20px;
+}
+
 /* =========================
    Featured projects section
 ========================= */
@@ -162,7 +167,7 @@ a.cta-button:focus {
     margin: 0;
     font-size: 1rem;
     line-height: 1.75;
-    color: #666;
+    color: #666;;
 }
 
 .project-content a {
