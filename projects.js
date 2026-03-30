@@ -98,7 +98,7 @@ const projects = [
     alt: "Aperçu du projet STREETCO",
     url: "projets/streetco.html"
   },
-  {
+  /*{
     id: 1,
     slug: "MUSEUM",
     category: "UI Design | Prototypes | Figma",
@@ -108,7 +108,7 @@ const projects = [
     image: "images/MUSEUM/museum-carte.png",
     alt: "Aperçu du projet Leopold Museum",
     url: "projets/leopold-museum.html"
-  },
+  },*/
 ];
 
 function createProjectCard(project) {

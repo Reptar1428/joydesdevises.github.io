@@ -17,9 +17,36 @@
 .about-hero .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    text-align: center;
+    align-items: flex-start;
+}
+
+/* Bloc photo + titre + citation */
+
+.about-header {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 48px;
+    width: 100%;
+}
+
+.about-photo {
+    display: flex;
+}
+
+.about-photo img {
+    height: 100%;        /* 🔥 prend la hauteur du bloc texte */
+    width: auto;
+    max-height: 180px;   /* ⬅️ sécurité pour éviter un monstre */
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.about-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* ⬅️ AVANT 14 → plus respirant */
+    text-align: left;
 }
 
 .about-kicker {
@@ -37,15 +64,35 @@
     font-weight: 300;
     color: #222;
     margin: 0;
-    max-width: 85%;
 }
 
-.about-intro {
-    max-width: 860px;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #666;
+.about-tagline {
     margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666; /* ⬅️ AVANT trop noir → plus doux */
+    font-weight: 400; /* ⬅️ évite le côté trop lourd */
+}
+
+/* Texte d'exemple sous le header */
+
+.about-example {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 32px;
+}
+
+.about-example p {
+    margin: 0 0 12px;
+}
+
+.about-example p:last-child {
+    margin-bottom: 0;
 }
 
 /* =========================
@@ -62,10 +109,10 @@
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: flex-start;
 }
 
-/* Background + Expertises + Approche + CTA full width */
+/* Full width blocks */
 
 .about-block:nth-child(1),
 .about-block:nth-child(2),
@@ -83,28 +130,28 @@
     border: 1px solid #e8e8e8;
     border-radius: 18px;
     padding: 42px;
-    box-shadow: 0 6px 28px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.06);
     height: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .about-block:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 34px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.08);
 }
 
 .about-block h2 {
     font-size: 2rem;
     font-weight: 300;
     color: #222;
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 }
 
 .about-block p {
     font-size: 1.05rem;
     line-height: 1.85;
     color: #444;
-    margin-bottom: 16px;
+    margin: 0 0 16px;
 }
 
 .about-block p:last-child {
@@ -144,57 +191,21 @@
     font-size: 1.05rem;
     font-weight: 600;
     color: #222;
-    margin-bottom: 8px;
+    margin: 0 0 8px;
 }
 
 .about-list-item p {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.7;
-}
-
-/* =========================
-   Principles section
-========================= */
-
-.principles-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-top: 28px;
-}
-
-.principle-card {
-    padding: 26px;
-    border-radius: 14px;
-    background: #fafafa;
-    border: 1px solid #ececec;
-    transition: border 0.2s ease, transform 0.2s ease;
-}
-
-.principle-card:hover {
-    border-color: #dcdcdc;
-    transform: translateY(-2px);
-}
-
-.principle-card h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 10px;
-}
-
-.principle-card p {
-    font-size: 0.98rem;
-    color: #555;
-    line-height: 1.75;
+    margin: 0;
 }
 
 /* =========================
    CTA section
 ========================= */
 
-.contact-cta {
+.about-cta {
     text-align: left;
 }
 
@@ -217,6 +228,15 @@
     .about-hero h1 {
         font-size: 3rem;
     }
+
+    .about-header {
+        gap: 24px;
+    }
+
+    .about-photo img {
+        width: 110px;
+        height: 110px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -224,8 +244,34 @@
         padding: 64px 0 36px;
     }
 
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-bottom: 24px;
+    }
+
+    .about-title-block {
+        align-items: center;
+        text-align: center;
+    }
+
     .about-hero h1 {
         font-size: 2.4rem;
+    }
+
+    .about-tagline {
+        font-size: 1.05rem;
+    }
+
+    .about-photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-example {
+        font-size: 0.98rem;
+        line-height: 1.75;
     }
 
     .about-sections {
@@ -237,7 +283,9 @@
     }
 
     .about-block:nth-child(1),
-    .about-block:nth-child(2) {
+    .about-block:nth-child(2),
+    .about-block:nth-child(3),
+    .about-block:nth-child(4) {
         grid-column: span 1;
     }
 
@@ -251,5 +299,10 @@
 
     .about-block h2 {
         font-size: 1.6rem;
+    }
+
+    .about-block p {
+        font-size: 1rem;
+        line-height: 1.75;
     }
 }

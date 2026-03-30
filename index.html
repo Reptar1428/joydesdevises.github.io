@@ -12,61 +12,51 @@
 
 <nav>
     <div class="nav-inner">
-      <a href="index.html">Accueil</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="Ressources/index.html">Ressources</a>
-      <a href="Services.html" aria-current="page">Services</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="Ressources/index.html">Ressources</a>
+        <a href="Services.html">Services</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="contact.html">Contact</a>
     </div>
 </nav>
 
 <main class="home-page">
 
     <section id="hero">
-        <div class="container narrow">
-            <h1>Joy Desdevises, PhD</h1>
+        <div class="hero-main">
+            <div class="container narrow">
+                <h1>Joy Desdevises</h1>
 
-            <p class="home-kicker">
-                Product Designer | Produits complexes, data et IA
-            </p>
+                <p class="home-kicker">
+                    Product Designer | Produits complexes, data et IA
+                </p>
+                <p class="home-intro">
+                    7 ans d'expérience sur des produits numériques complexes — SaaS, plateformes data, services publics. 
+                    <br> Des clients comme Thales, l'ADEME ou le Ministère du Travail font confiance à une approche qui allie rigueur scientifique et sens du produit.
+                </p>
 
-            <p class="home-intro">
-                J’aide les équipes produit à concevoir et améliorer des outils complexes 
-                (ex: SaaS, data platforms, services publics numériques).
-            </p>
-             <div class="cta-contact">
-                <a href="contact.html" class="cta-button">Me contacter</a>
-                <a href="PDF/CV_JoyDesdevises_FR.pdf" class="cta-button" target="_blank">Mon CV</a>          
-             </div>
-        </div>
-    </section>
-
-    <section class="featured-projects">
-        <div class="container">
-
-            <h2>Sélection de projets</h2>
-
-            <!-- CONTENEUR VIDE -->
-            <div class="project-grid" id="featured-projects-grid"></div>
-
-            <div class="view-all">
-                <a href="portfolio.html" class="cta-button">Découvrir le portfolio</a>
+                <div class="cta-contact">
+                    <a href="contact.html" class="cta-button">Me contacter</a>
+                    <a href="https://joy-desdevises.github.io/Services.html" class="cta-button">Mes services</a>
+                </div>
             </div>
+        </div>
 
+        <div class="logo-strip-full">
+            <div class="logo-strip">
+                <img src="images/bobbee-expert-comptable 1.png" alt="Logo Bobbee">
+                <img src="images/logo-1jeune1solution 1.png" alt="Logo 1 jeune 1 solution">
+                <img src="images/logo-fabrique 1.png" alt="Logo La Fabrique de la Donnée Territoriale">
+                <img src="images/logo-thales 2.png" alt="Logo Thales">
+                <img src="images/Ministere-ecologie-logo 1.png" alt="Logo Ministère de la Transition écologique">
+                <img src="images/octo-logo 1.png" alt="Logo OCTO Technology">
+                <img src="images/Streeco_logo 1.png" alt="Logo Streetco">
+            </div>
         </div>
     </section>
 
 </main>
-
-<!-- Script des projets -->
-<script src="projects.js"></script>
-
-<script>
-renderProjects("featured-projects-grid", {
-    ids: [5, 6, 8]
-});
-</script>
 
 </body>
 </html>
