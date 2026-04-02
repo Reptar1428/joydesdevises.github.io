@@ -146,6 +146,164 @@ section {
 }
 
 /* =========================
+   Filters
+========================= */
+
+.articles-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 20px 24px;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #999;
+  min-width: 88px;
+  flex-shrink: 0;
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-pill {
+  padding: 7px 16px;
+  background: #f0f2f4;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.filter-pill:hover {
+  background: #e2e8f0;
+  color: #222;
+}
+
+.filter-pill.active {
+  background: #007acc;
+  color: #fff;
+  border-color: #007acc;
+}
+
+/* =========================
+   Article count
+========================= */
+
+.articles-count {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #999;
+  margin-bottom: 16px;
+  min-height: 1.2em;
+}
+
+/* =========================
+   Article card — theme pills (below title)
+========================= */
+
+.resource-theme-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.resource-theme-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #eef3f7;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 500;
+  color: #4a6070;
+  letter-spacing: 0.03em;
+}
+
+/* =========================
+   Pagination
+========================= */
+
+.articles-pagination {
+  margin-top: 28px;
+}
+
+.pagination-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-btn {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  background: #f0f2f4;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background: #e2e8f0;
+  color: #222;
+}
+
+.pagination-btn.active {
+  background: #007acc;
+  color: #fff;
+  border-color: #007acc;
+}
+
+.pagination-btn.disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+/* =========================
+   Empty state
+========================= */
+
+.articles-empty {
+  padding: 32px 0;
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+/* =========================
    Articles list
 ========================= */
 
@@ -410,6 +568,26 @@ html {
 
     .resource-article-links {
         justify-content: flex-start;
+    }
+
+    .articles-filters {
+        padding: 16px 18px;
+    }
+
+    .filter-group {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-label {
+        min-width: unset;
+    }
+
+    .pagination-btn {
+        min-width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
     }
 
     .resources-toc {
